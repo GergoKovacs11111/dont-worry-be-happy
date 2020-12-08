@@ -1,0 +1,257 @@
+:root {
+  --color1: #0e49b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
+}
+
+body {
+  color: var(--color1);
+  background-color: #bce6eb;
+  overflow: hidden;
+}
+
+button {
+  color: balck !important;
+  background-color: #bce6eb !important;
+  border: 1px solid var(--color1) !important;
+}
+
+img {
+  border: 1px solid var(--color1) !important;
+  margin: 2rem !important;
+}
+
+#game-space {
+  height: 80vh;
+  width: calc(80vh / 2);
+  background-color: #bce6eb;
+  margin: auto;
+  margin-top: 10vh;
+  position: relative;
+  border: 1px solid var(--color1);
+}
+
+.button-container {
+  height: 10vh;
+  width: calc(80vh / 2);
+  background-color: #bce6eb;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#right,
+#left {
+  height: 80%;
+  width: 45%;
+  border: none;
+  margin: 2.5% 0;
+  z-index: 100;
+}
+
+#left {
+  margin-right: 5%;
+  padding-right: 3%;
+}
+#right {
+  margin-left: 5%;
+  padding-left: 3%;
+}
+
+.score {
+  z-index: 2;
+  background-color: #bce6eb;
+  position: absolute;
+  top: 0;
+  height: 10vh;
+  width: calc(80vh / 2);
+  left: calc(50% - (80vh / 4));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu {
+  z-index: 101;
+  visibility: visible;
+  width: 100vw;
+  height: 100vh;
+  background-color: #bce6eb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#menu p {
+  font-size: 3vh;
+  margin: 1.5vh;
+}
+#menu img {
+  height: 40vh;
+  width: 40vh;
+}
+
+#menu button {
+  font-size: 3vh;
+  border: none;
+  display: inline-block;
+  padding: 1.5vh;
+
+  border: 1px solid var(--color1) !important;
+  color: var(--color1) !important;
+}
+
+#final {
+  z-index: 100;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: #bce6eb;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#final img {
+  width: 50vh;
+  height: 50vh;
+  border: none !important;
+}
+
+#final h3 {
+  font-size: 8vh;
+}
+
+#final button {
+  margin-top: 1.5vh;
+  font-size: 3vh;
+  border: none;
+  display: inline-block;
+  padding: 1.5vh;
+  border: 1px soliddarkgreen !important;
+  color: var(--color1) !important;
+}
+
+.animation0 {
+  animation: fall 2.5s linear;
+}
+
+.animation1 {
+  animation: fall 3s linear;
+}
+.animation2 {
+  animation: fall 2s linear;
+}
+.animation3 {
+  animation: fall 2.2s linear;
+}
+#obstacle0 {
+  width: 10%;
+  height: calc((80vh / 2) / 10);
+  /*   background-color: whitesmoke;
+  border: 1px solid white; */
+
+  position: absolute;
+  border-radius: 50%;
+  top: calc(((80vh / 2) / 10) * -1);
+}
+#obstacle1 {
+  width: 10%;
+  height: calc((80vh / 2) / 10);
+  /*   background-color: whitesmoke;
+  border: 1px solid white; */
+
+  position: absolute;
+  top: calc(((80vh / 2) / 10) * -1);
+  left: 22%;
+  border-radius: 50%;
+}
+
+#obstacle2 {
+  width: 10%;
+  height: calc((80vh / 2) / 10);
+  /*   background-color: whitesmoke;
+  border: 1px solid white; */
+
+  position: absolute;
+  top: calc(((80vh / 2) / 10) * -1);
+  left: 45%;
+  border-radius: 50%;
+}
+
+#obstacle3 {
+  width: 10%;
+  height: calc((80vh / 2) / 10);
+  /*   background-color: whitesmoke;
+  border: 1px solid white; */
+  position: absolute;
+  top: calc(((80vh / 2) / 10) * -1);
+  left: 67%;
+  border-radius: 50%;
+}
+
+#obstacle4 {
+  width: 10%;
+  height: calc((80vh / 2) / 10);
+  /*   background-color: whitesmoke;
+  border: 1px solid white; */
+
+  position: absolute;
+  top: calc(((80vh / 2) / 10) * -1);
+  left: 90%;
+  border-radius: 50%;
+}
+
+#character {
+  width: 15%;
+  height: calc((80vh / 2) / 6.666667);
+
+  /*   background-color: black;
+   */
+  border: 1px solid rgb(68, 193, 235);
+  position: absolute;
+  bottom: 1px;
+  left: 40%;
+  border-radius: 50%;
+}
+
+@keyframes fall {
+  0% {
+    top: calc(((80vh / 2) / 10) * -1);
+  }
+  100% {
+    top: calc(((80vh / 2) / 10) * 19);
+  }
+}
+
+.timer {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer h1 {
+  color: var(--color1) !important;
+  font-size: xx-large !important;
+  font-weight: bold;
+}
